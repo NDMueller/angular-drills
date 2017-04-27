@@ -1,9 +1,30 @@
-<html>
-	<body>
-		Something
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<html ng-app="pokeFightClub">
+
+	<body ng-controller="mainCtrl">
+
+		<div class="">
+			Poke1: {{poke1.name}}
+			<br>Poke2: {{poke2.name}}
+		</div>
+		<br> Winner: {{winner.name}}
+		<button type="button" name="button" ng-click="fight()">FIGHT!</button>
+
+		<hr>
+		<br>
+
+		<div ng-repeat="pokeman in pokemon">
+			{{pokeman.name}}
+
+			<button type="button" ng-click="setPoke1(pokeman)">Set Poke1</button>
+			<button type="button" ng-click="setPoke2(pokeman)">Set Poke2</button>
+
+			<hr>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
 	</body>
+
 </html>

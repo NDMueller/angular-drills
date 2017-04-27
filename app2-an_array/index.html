@@ -1,12 +1,21 @@
 <html ng-app="arrayApp">
-	<head>
-		<link rel="stylesheet" href="style.css"></link>
-	</head>
-	<body ng-controller="arrayController">
-	
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
-	</body>
+
+<head>
+	<link rel="stylesheet" href="style.css"></link>
+</head>
+
+<body ng-controller="arrayController">
+	<div ng-repeat="item in data">
+		Name: {{item.name}}<br> Email:{{item.email}}
+		<br> Date Employed: {{item.dateEmployed | date:'shortDate' }}<br> Phone:{{item.phone}}
+		<br>
+		<hr> {{item}}
+	</div>
+	{{data}}
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<script src="service.js"></script>
+</body>
+
 </html>

@@ -101,13 +101,9 @@ var myData = [
 	{"name": "Odysseus Nash", "email": "purus@rutrum.co.uk", "dateEmployed": "01/08/2016", "phone": "722-7908"}
 ];
 
-
-
-
-
-
-
-
-
-
-
+angular.module('arrayApp')
+.service('mainService',function(){
+	this.getData=function(){
+		return myData;
+	}
+});
